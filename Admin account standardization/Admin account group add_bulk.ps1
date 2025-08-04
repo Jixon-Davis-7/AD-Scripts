@@ -1,5 +1,5 @@
-#if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
-#    $credAdmin = get-credential -Credential "ADS\$us" 
+
+#    $credAdmin = get-credential 
 
 
 $inputpath = "C:\Users\davisj1\VSCode\My_Scripts\Powershell\Admin account standardization\Output.txt"
@@ -17,3 +17,4 @@ foreach ($user in $Adminusers)
     Add-ADGroupMember -Identity $group -Members $u -Credential $credAdmin -Verbose
   }
 }
+
