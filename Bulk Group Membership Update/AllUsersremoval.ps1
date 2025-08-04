@@ -1,6 +1,6 @@
 <#
-if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
-    $cred = get-credential -Credential "ADS\$us"
+
+    $cred = get-credential 
 #>
 
 
@@ -30,3 +30,4 @@ else
 {
     Write-Host "Group $groupName not found." -BackgroundColor Red
 }
+
