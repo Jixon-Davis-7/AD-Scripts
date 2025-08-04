@@ -1,5 +1,5 @@
 # Define user parameters
-#Connect-AzAccount -Subscription 'CognitiveServices-prd-amer-7e35da2f' | Out-Null
+#Connect-AzAccount | Out-Null
 #Connect-MgGraph  -NoWelcome
 
 
@@ -31,3 +31,4 @@ $userParams = @{
 New-MgUser @userParams
 Write-Host "Created the service account $($account.SamAccountName)"
 }
+
