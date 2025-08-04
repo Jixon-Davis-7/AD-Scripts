@@ -5,7 +5,7 @@ Clear-Host
 " _________________________________________________________________________________________________________________"
 
 #Credentials
-#Connect-AzAccount -Subscription 'CognitiveServices-prd-amer-7e35da2f' | Out-Null
+#Connect-AzAccount | Out-Null
 #if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
 #    $credAdmin = get-credential -Credential "ADS\$us" 
 
@@ -169,4 +169,5 @@ elseif($givenname -and ($env -ne 'p' -or $env -ne 's' -or $env -ne 'd' -or $env 
 else 
 {
    Write-Host "Service account name is invalid"   -ForegroundColor Magenta
+
 }
