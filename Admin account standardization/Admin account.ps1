@@ -1,5 +1,5 @@
-#if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
-#    $credAdmin = get-credential -Credential "ADS\$us" 
+
+#    $credAdmin = get-credential 
 
 
 Write-Host "Select one option" -ForegroundColor Yellow
@@ -40,4 +40,5 @@ try
 catch    
 {
     Write-Host "Reuest Unsuccessful" -ForegroundColor Red
+
 }
