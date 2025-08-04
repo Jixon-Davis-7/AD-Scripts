@@ -11,8 +11,8 @@ Write-Host " ___________________________________________________________________
 Write-Host ""
 
 
-#if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
-#    $credAdmin = get-credential -Credential "ADS\$us" 
+
+#    $credAdmin = get-credential
 
 
 $UsersList = Get-Content -Path $UsersListPath
@@ -102,3 +102,4 @@ else
 {
     Write-Host "Invalid input for list type. Please provide 'E' or 'N'." -ForegroundColor Red
 }
+
