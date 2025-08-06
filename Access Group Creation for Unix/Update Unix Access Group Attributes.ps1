@@ -1,10 +1,10 @@
 
 
 #Credenetials
-#Connect-AzAccount -Subscription 'CognitiveServices-prd-amer-7e35da2f' | Out-Null
+Connect-AzAccount | Out-Null
 
-#if($env:USERNAME.contains("admin")){$us = $env:USERNAME}  else{ $us = "$($env:USERNAME)admin"}
-#    $credAdmin = get-credential -Credential "ADS\$us" 
+
+  $credAdmin = get-credential
 
 
 #Function to pull the highest gidnumber value assigned on the access group..........................................................
@@ -274,3 +274,4 @@ catch
 {
   Write-Host "No group found with the groupname '$gpname'" -ForegroundColor Red
 }
+
